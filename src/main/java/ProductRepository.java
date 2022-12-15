@@ -6,11 +6,11 @@ public class ProductRepository {
         for (int i = 0; i < products.length; i++) {
             tmp[i] = products[i];
         }
-        tmp[tmp.length - 1] = product;
+        tmp[products.length] = product;
         products = tmp;
     }
 
-    public Product[] removeProductById(int idRemove) {
+    public void removeProductById(int idRemove) {
         Product[] tmp = new Product[products.length - 1];
         int indexInsert = 0;
         for (Product product : products) {
@@ -18,9 +18,8 @@ public class ProductRepository {
                 tmp[indexInsert] = product;
                 indexInsert++;
             }
-            products = tmp;
         }
-        return tmp;
+        products = tmp;
     }
 
     public static Product[] findAll() {
