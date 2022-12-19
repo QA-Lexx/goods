@@ -32,4 +32,10 @@ public class ProductManager {
             return false;
         }
     }
+
+    private static Product[] products = new Product[0];
+
+    public static Product[] findAll() {
+        return products;
+    }
 }
