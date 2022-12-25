@@ -63,7 +63,7 @@ public class ProductTest {
         manager.addProduct(book1);
 
         Product[] expected = {};
-        Product[] actual = manager.findAll();
+        Product[] actual = manager.searchBy("null");
         Assertions.assertArrayEquals(expected, actual);
     }
 
